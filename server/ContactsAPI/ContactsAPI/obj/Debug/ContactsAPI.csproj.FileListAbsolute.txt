@@ -160,3 +160,6 @@ C:\Projects\ContactsApp\server\ContactsAPI\ContactsAPI\obj\Debug\ContactsAPI.csp
 C:\Projects\ContactsApp\server\ContactsAPI\ContactsAPI\obj\Debug\ContactsAPI.csproj.CopyComplete
 C:\Projects\ContactsApp\server\ContactsAPI\ContactsAPI\obj\Debug\ContactsAPI.dll
 C:\Projects\ContactsApp\server\ContactsAPI\ContactsAPI\obj\Debug\ContactsAPI.pdb
+C:\Projects\ContactsApp\server\ContactsAPI\ContactsAPI\bin\System.Web.Cors.dll
+C:\Projects\ContactsApp\server\ContactsAPI\ContactsAPI\bin\System.Web.Http.Cors.dll
+C:\Projects\ContactsApp\server\ContactsAPI\ContactsAPI\bin\System.Web.Http.Cors.xml
