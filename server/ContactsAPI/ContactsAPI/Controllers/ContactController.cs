@@ -40,6 +40,10 @@ namespace ContactsAPI.Controllers
 
                 if (!ValidateFields(contact)) throw Exception();
 
+                if (contact.Email == null) contact.Email = "";
+                if (contact.PhoneNum == null) contact.PhoneNum = "";
+                if (contact.Gender == null) contact.Gender = "";
+
                 string query = "INSERT INTO Contacts (IdNumber ,FullName ,Email, BirthDate, Gender, PhoneNum) " +
                     "VALUES (@IdNumber, @FullName, @Email, @BirthDate, @Gender, @PhoneNum)";
                 using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ContactsDB"].ConnectionString))

@@ -87,32 +87,24 @@ const Contacts = () => {
 
   const validateFields = newData => {
     if (!('IdNumber' in newData) || newData.IdNumber.length === 0) {
-      setSeverity('error');
-      setAlertMsg('Id Number is required');
-      setOpen(true);
+      showAlert('error', 'Id Number is required');
       return false;
     }
     if (!('FullName' in newData) || newData.FullName.length === 0) {
-      setSeverity('error');
-      setAlertMsg('Full Name is required');
-      setOpen(true);
+      showAlert('error', 'Full Name is required');
       return false;
     }
-    if (
-      !('BirthDate' in newData) ||
-      newData.BirthDate.length === 0 ||
-      newData.BirthDate > new Date()
-    ) {
-      setSeverity('error');
-      setAlertMsg('Birth Date is required');
-      setOpen(true);
+    if (!('BirthDate' in newData) || newData.BirthDate.length === 0) {
+      showAlert('error', 'Birth Date is required');
+      return false;
+    }
+    if (newData.BirthDate > new Date()) {
+      showAlert('error', 'Invalid Birth Date');
       return false;
     }
     if ('Email' in newData && newData.Email.length > 0) {
       if (!emailRegex.test(newData.Email.toLowerCase())) {
-        setSeverity('error');
-        setAlertMsg('Invalid Email Address');
-        setOpen(true);
+        showAlert('error', 'Invalid Email Address');
         return false;
       }
     }
